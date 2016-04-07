@@ -1,0 +1,229 @@
+/*=====================================
+MEDIA INFORMATION
+
+@media (min-width:960px) <-- this means if this is met then....)){
+  //css here (do this -- this styking is applied)
+
+  +++this is dealing with WIDTH the yet+++
+
+SETTINGS
+  1) AND == both true
+  2) OR (is a COMMA)
+
+TYPES ---added RIGHT AFTER 
+@media screent(min-width:960px)
+
+MIN - at least // if it at least XX pixles then yes
+MAX - at most //  if it at most XX pixles then yes
+
+=====================================
+
+
+* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+* {
+      font-family: 'Fira Sans', sans-serif;
+}
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 1.4em;
+     height: 0;
+}
+.clear {
+  clear: both;
+}
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+     margin: 0;
+     border: none;
+     background-color: black;
+  }
+/* font details from a site where i loved the font -- took from https://www.squarespace.com/logo css style for H1 (not all of H1, just some of it, + my tweaks)*/
+h1 { 
+    line-height: 1.05em;
+    font-weight: 700;
+    text-transform: none;
+    margin: 0 0 10px;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: auto!important;
+}
+
+h4 {
+    line-height: 1.05em;
+    font-weight: 300;
+    text-transform: none;
+    margin: 0 0 10px;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: auto!important;
+}
+
+p, li {
+    line-height: 1.05em;
+    font-weight: 600;
+    text-transform: none;
+    margin: 0 0 10px;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: auto!important;
+} 
+
+header {
+ border: 1px;
+ background: black;
+ margin: 0;
+ height: 100px;
+}
+
+#container {
+  margin: 0;
+  background-color: black;
+}
+
+#side-nav {
+  margin: 0;
+  width: 20%;
+  min-height: 800px; /*NEED TO ADJUST THIS FOR RESPONSIVE*/
+  float: left; /*this brought up the main-content div to the right of the nav bar*/
+  text-align: left;
+  color: white;
+  background-color: black;
+  padding-top: 75px;
+  padding-left: 30px;
+}
+
+.menu {
+  margin: 0;
+  text-align: right;
+  padding-top: 100px;
+  padding-right: 30px;
+}
+
+#main-content {
+  min-height: 800px; /*NEED TO ADJUST THIS FOR RESPONSIVE */
+  height: auto;
+  width: 75%;
+  color: black;
+  float: left;  
+  text-align: left;
+  background: url(../images/heartivy.png) no-repeat center center fixed;
+  background-color: black;
+}
+
+#footer {
+  min-height: 100px;
+  width: 100%;
+  color: blue;
+  float: left;
+  text-align: center;
+  background-color: black;
+}
+
+
+ul {
+  list-style: none;
+  /*margin: 0;
+  padding: 0;*/
+
+}
+
+li {
+ 
+}
+
+
+
+/******************************************
+/* BOOTSRAP @MEDIA QUERY: MOBILE
+/*******************************************/
+@media (max-width:760px) {
+
+.three, .four {
+  width: 100%;
+}
+li {
+  display: block;
+  color: white;
+}/*
+ul li:last-child{
+  display:block;
+}*/
+}
+
+
+/******************************************
+/* BOOTSRAP @MEDIA QUERY: DESKTOP
+/* Small devices (tablets, 768px and up) */
+/*******************************************/
+@media (max-width:768px) { 
+
+#side-nav, .container, #main-content, .four {
+ width: 100%;
+}
+li {
+  width: 100%;
+}
+ul li:last-child {
+   width: 100%;
+}
+}
+
+/******************************************
+/* BOOTSRAP @MEDIA QUERY: DESKTOP
+/* Small devices large (desktop, 992px and up) */
+/*******************************************/
+@media (max-width:992px) { 
+
+#side-nav, .container, #main-content, .four {
+ width: 100%;
+}
+li {
+  width: 100%;
+}
+ul li:last-child {
+   width: 100%;
+}
+}
+
+/******************************************
+/* BOOTSRAP @MEDIA QUERY: DESKTOP
+/* Small devices larger (desktop, 1200px and up) */
+/*******************************************/
+@media (max-width:1200px) { 
+
+#side-nav, .container, #main-content, .four {
+ width: 100%;
+}
+li {
+  width: 100%;
+}
+ul li:last-child {
+   width: 100%;
+}
+}
+
+
+/*********************************************/
+/* BOOTSTRAP MEDIA QUERIES
+/*********************************************/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
